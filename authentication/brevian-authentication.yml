@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://app.brevian.ai/.well-known/openid-configuration
+summary:
+  types: [oauth2]
+  oauth2_flows: [authorizationCode]
+  pkce: true
+  dynamic_client_registration: true
+schemes:
+- name: BrevianMCPOAuth
+  type: oauth2
+  description: >-
+    OAuth 2.1 authorization-code flow (with PKCE S256) protecting the Brevian
+    hosted MCP server at https://app.brevian.ai/mcp. Supports RFC 7591 dynamic
+    client registration and RFC 7009 token revocation.
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://app.brevian.ai/mcp/authorize
+    tokenUrl: https://app.brevian.ai/mcp/token
+    registrationUrl: https://app.brevian.ai/mcp/register
+    revocationUrl: https://app.brevian.ai/mcp/revoke
+    codeChallengeMethods: [S256]
+    tokenEndpointAuthMethods: [client_secret_post, client_secret_basic]
+    scopes:
+      brevian:read: Read access to Brevian revenue-execution context
+  sources: [well-known/brevian-oauth-authorization-server.json]
+notes: >-
+  Brevian exposes no public documented REST API; the machine surface is the
+  hosted MCP server, whose auth model is captured here from the published
+  OAuth/OIDC discovery documents. The web app sign-in lives at
+  https://app.brevian.ai/.
