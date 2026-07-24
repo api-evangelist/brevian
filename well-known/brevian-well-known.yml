@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://app.brevian.ai/.well-known/
+host: https://app.brevian.ai
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: brevian-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: brevian-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  The OAuth Authorization Server / OpenID discovery documents are published for
+  the Brevian hosted MCP server (issuer https://app.brevian.ai/mcp). No
+  security.txt, api-catalog, or ai-plugin.json is published on the apex,
+  www, or docs hosts (all 404).

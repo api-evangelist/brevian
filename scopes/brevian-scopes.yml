@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://app.brevian.ai/.well-known/oauth-authorization-server
+schemes:
+- name: BrevianMCPOAuth
+  source: well-known/brevian-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://app.brevian.ai/mcp/authorize
+    tokenUrl: https://app.brevian.ai/mcp/token
+scopes:
+- scope: brevian:read
+  description: >-
+    Read access to Brevian revenue-execution context (knowledge, deals,
+    conversations, pipeline) exposed through the hosted MCP server.
+  flows: [authorizationCode]
+  sources: [well-known/brevian-oauth-authorization-server.json]
+notes: >-
+  brevian:read is the only scope advertised in scopes_supported of the OAuth
+  Authorization Server metadata. No broader write/admin scopes are published.

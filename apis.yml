@@ -1,7 +1,29 @@
 aid: brevian
 name: Brevian
-description: Brevian is a company surfaced as a portfolio company of felicis and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Brevian is a Revenue Execution AI platform for enterprise sales teams. It
+  operates across the full deal lifecycle — preparing reps before calls,
+  guiding them in real time during conversations, automatically capturing deal
+  context into the CRM, and detecting patterns across deals. Brevian connects
+  product knowledge, deals, conversations, and pipeline into a single knowledge
+  graph that sits on top of an existing stack (Salesforce or HubSpot for CRM,
+  Gong or Chorus for conversation intelligence, Zoom, Google Meet, or Microsoft
+  Teams for calls). It exposes a hosted Model Context Protocol (MCP) server so
+  agents can access that revenue-execution context under OAuth. Founded by Vinay
+  Wagh (CEO, ex-Databricks) and Anupreet Walia (CTO); backed by Felicis.
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/68ae7d3f5a3cc059a9f4e2bb/695d011141b1c3f8e8de87eb_opengraph.png
 url: https://raw.githubusercontent.com/api-evangelist/brevian/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +33,41 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- Sales
+- Revenue Execution
+- AI Agents
+- CRM
+- Model Context Protocol
+- Enterprise
+apis:
+- name: Brevian MCP Server
+  description: >-
+    Brevian's hosted (remote) Model Context Protocol server, exposing
+    revenue-execution context (knowledge, deals, conversations, pipeline) to
+    MCP-capable agents. Access is gated by OAuth 2.1 (authorization_code +
+    PKCE) with dynamic client registration; the advertised scope is
+    brevian:read. Tools are not enumerable without a valid access token.
+  humanURL: https://docs.brevian.ai/
+  baseURL: https://app.brevian.ai/mcp
+  tags:
+  - Model Context Protocol
+  - AI Agents
+  - Sales
+  properties:
+  - type: MCPServer
+    url: mcp/brevian-mcp.yml
+  - type: WellKnown
+    url: well-known/brevian-well-known.yml
+  - type: Authentication
+    url: authentication/brevian-authentication.yml
+  - type: OAuthScopes
+    url: scopes/brevian-scopes.yml
+  - type: Conventions
+    url: conventions/brevian-conventions.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +76,48 @@ maintainers:
 common:
 - type: Website
   url: https://brevian.ai
+- type: DeveloperPortal
+  url: https://docs.brevian.ai/
+- type: Documentation
+  url: https://docs.brevian.ai/
+- type: Support
+  url: https://docs.brevian.ai/
+- type: Blog
+  url: https://www.brevian.ai/resources
+- type: SignUp
+  url: https://app.brevian.ai/
+- type: Login
+  url: https://app.brevian.ai/
+- type: TermsOfService
+  url: https://docs.brevian.ai/security/terms-of-service
+- type: PrivacyPolicy
+  url: https://docs.brevian.ai/security/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/brevian-ai
+- type: ChangeLog
+  url: https://docs.brevian.ai/release_notes/all_release_notes
+- type: TrustCenter
+  url: https://trust.brevian.ai/
+- type: MCPServer
+  url: mcp/brevian-mcp.yml
+- type: WellKnown
+  url: well-known/brevian-well-known.yml
+  name: OAuth Authorization Server / OpenID discovery
+- type: Authentication
+  url: authentication/brevian-authentication.yml
+- type: OAuthScopes
+  url: scopes/brevian-scopes.yml
+- type: Conventions
+  url: conventions/brevian-conventions.yml
+- type: ChangeLog
+  url: changelog/brevian-changelog.yml
+  name: Product Pulse (structured)
+- type: LLMsTxt
+  url: llms/brevian-llms.txt
+- type: DomainSecurity
+  url: security/brevian-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

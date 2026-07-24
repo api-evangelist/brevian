@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.brevian.ai/release_notes/all_release_notes
+name: Brevian Product Pulse
+scheme: weekly-dated
+cadence: weekly
+notes: >-
+  Brevian publishes weekly "Product Pulse" release notes, organized by fiscal
+  quarter (e.g. 2026/q2) and dated by week range. Entries are product/UX
+  changes for its Revenue Execution AI platform; no API/breaking-change
+  versioning scheme is published.
+entries:
+- date: '2026-05-21'
+  window: May 21 - 27, 2026
+  url: https://docs.brevian.ai/release_notes/2026/q2/may_21_27
+  breaking: false
+  highlights:
+  - Meetings calendar redesign with improved scheduling visuals and time-based navigation
+  - Consistent calendar event scaling and display
+  - Standardized time formatting across Meetings views
+  - Added release-notes quick link in the profile menu
+- date: '2026-05-07'
+  window: May 7 - 13, 2026
+  url: https://docs.brevian.ai/release_notes/2026/q2/may_7_13
+  breaking: false
+- date: '2026-04-30'
+  window: April 30 - May 6, 2026
+  url: https://docs.brevian.ai/release_notes/2026/q2/april_30_may_6
+  breaking: false
+- date: '2026-04-23'
+  window: April 23 - 29, 2026
+  url: https://docs.brevian.ai/release_notes/2026/q2/april_23_29
+  breaking: false
+- date: '2026-04-16'
+  window: April 16 - 22, 2026
+  url: https://docs.brevian.ai/release_notes/2026/q2/april_16_22
+  breaking: false
