@@ -6,11 +6,9 @@ server:
   name: brevian
   transport: http
   url: https://app.brevian.ai/mcp
-  description: >-
-    Brevian's hosted (remote) Model Context Protocol server for its Revenue
-    Execution AI platform. Exposes Brevian knowledge, deals, and pipeline
-    context to MCP-capable agents. Access is gated by OAuth 2.1 with dynamic
-    client registration and PKCE.
+  description: Brevian's hosted (remote) Model Context Protocol server for its Revenue Execution AI platform.
+    Exposes Brevian knowledge, deals, and pipeline context to MCP-capable agents. Access is gated by OAuth
+    2.1 with dynamic client registration and PKCE.
 authorization:
   type: oauth2
   spec: OAuth 2.1 (authorization_code + PKCE)
@@ -19,14 +17,24 @@ authorization:
   token_endpoint: https://app.brevian.ai/mcp/token
   registration_endpoint: https://app.brevian.ai/mcp/register
   revocation_endpoint: https://app.brevian.ai/mcp/revoke
-  grant_types: [authorization_code, refresh_token]
-  code_challenge_methods: [S256]
-  token_endpoint_auth_methods: [client_secret_post, client_secret_basic]
-  scopes_supported: [brevian:read]
+  grant_types:
+  - authorization_code
+  - refresh_token
+  code_challenge_methods:
+  - S256
+  token_endpoint_auth_methods:
+  - client_secret_post
+  - client_secret_basic
+  scopes_supported:
+  - brevian:read
 tools: []
-notes: >-
-  Tool list could not be enumerated remotely: POST /mcp tools/list returns
-  {"error":"invalid_token","Authentication required"} — the server requires a
-  valid OAuth access token before advertising its tool surface. The server's
-  existence, transport, and OAuth contract are confirmed from the published
-  discovery documents.
+notes: 'Tool list could not be enumerated remotely: POST /mcp tools/list returns {"error":"invalid_token","Authentication
+  required"} — the server requires a valid OAuth access token before advertising its tool surface. The
+  server''s existence, transport, and OAuth contract are confirmed from the published discovery documents.'
+deployment:
+  mode: remote
+  endpoint: https://app.brevian.ai/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
