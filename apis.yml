@@ -41,6 +41,15 @@ tags:
 - Revenue Execution
 - AI Agents
 - CRM
+- MCP
+- Enterprise
+tags_raw:
+- Company
+- Artificial Intelligence
+- Sales
+- Revenue Execution
+- AI Agents
+- CRM
 - Model Context Protocol
 - Enterprise
 apis:
@@ -54,6 +63,10 @@ apis:
   humanURL: https://docs.brevian.ai/
   baseURL: https://app.brevian.ai/mcp
   tags:
+  - MCP
+  - AI Agents
+  - Sales
+  tags_raw:
   - Model Context Protocol
   - AI Agents
   - Sales
