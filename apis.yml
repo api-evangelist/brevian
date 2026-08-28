@@ -11,6 +11,17 @@ description: >-
   Teams for calls). It exposes a hosted Model Context Protocol (MCP) server so
   agents can access that revenue-execution context under OAuth. Founded by Vinay
   Wagh (CEO, ex-Databricks) and Anupreet Walia (CTO); backed by Felicis.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: approval
