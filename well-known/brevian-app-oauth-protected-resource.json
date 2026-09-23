@@ -1,0 +1,1 @@
+{"resource":"https://app.brevian.ai/mcp","authorization_servers":["https://app.brevian.ai/mcp"],"scopes_supported":["brevian:read"],"bearer_methods_supported":["header"]}
